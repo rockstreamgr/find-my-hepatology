@@ -2,6 +2,7 @@ import { useState } from "react";
 import { Heart, MapPin, Phone, Navigation, Loader2, AlertCircle, Cross } from "lucide-react";
 import { hospitals, Hospital } from "@/data/hospitals";
 import { haversineDistance } from "@/lib/haversine";
+import PrivacyPolicyModal from "@/components/PrivacyPolicyModal";
 
 type AppState = "welcome" | "loading" | "result" | "error";
 
@@ -154,8 +155,9 @@ const Index = () => {
         )}
       </main>
 
-      <footer className="text-center text-xs text-muted-foreground py-4">
-        © {new Date().getFullYear()} Ηπατολογικά Κέντρα Ελλάδας
+      <footer className="text-center text-xs text-muted-foreground py-4 space-y-1">
+        <div><PrivacyPolicyModal /></div>
+        <p>© {new Date().getFullYear()} Ηπατολογικά Κέντρα Ελλάδας</p>
       </footer>
     </div>
   );
