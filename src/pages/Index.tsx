@@ -154,8 +154,9 @@ const Index = () => {
         )}
       </main>
 
-      <footer className="text-center text-xs text-muted-foreground py-4">
-        © {new Date().getFullYear()} Ηπατολογικά Κέντρα Ελλάδας
+      <footer className="text-center text-xs text-muted-foreground py-4 space-y-1">
+        <div><PrivacyPolicyModal /></div>
+        <p>© {new Date().getFullYear()} Ηπατολογικά Κέντρα Ελλάδας</p>
       </footer>
     </div>
   );
