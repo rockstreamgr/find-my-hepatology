@@ -1,0 +1,21 @@
+{
+  "name": "Hepatitis GR",
+  "short_name": "Hepatitis GR",
+  "description": "Εντοπίστε το πλησιέστερο Ηπατολογικό Κέντρο στην Ελλάδα.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#F0FDFA",
+  "theme_color": "#0D9488",
+  "icons": [
+    {
+      "src": "/favicon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml"
+    },
+    {
+      "src": "/apple-touch-icon.png",
+      "sizes": "180x180",
+      "type": "image/png"
+    }
+  ]
+}
