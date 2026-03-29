@@ -2,6 +2,7 @@ import { useState } from "react";
 import { Heart, MapPin, Phone, Navigation, Loader2, AlertCircle, Cross } from "lucide-react";
 import { hospitals, Hospital } from "@/data/hospitals";
 import { haversineDistance } from "@/lib/haversine";
+import PrivacyPolicyModal from "@/components/PrivacyPolicyModal";
 
 type AppState = "welcome" | "loading" | "result" | "error";
 
