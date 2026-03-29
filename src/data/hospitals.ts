@@ -3,8 +3,11 @@ export interface Hospital {
   name: string;
   address: string;
   phone: string;
+  phone2?: string;
   lat: number;
   lng: number;
+  city: string;
+  isPediatric?: boolean;
 }
 
 export const hospitals: Hospital[] = [
@@ -15,6 +18,7 @@ export const hospitals: Hospital[] = [
     phone: "1566",
     lat: 37.9836,
     lng: 23.7668,
+    city: "Αθήνα",
   },
   {
     id: 2,
@@ -23,6 +27,7 @@ export const hospitals: Hospital[] = [
     phone: "2132045167",
     lat: 37.976,
     lng: 23.748,
+    city: "Αθήνα",
   },
   {
     id: 3,
@@ -31,6 +36,7 @@ export const hospitals: Hospital[] = [
     phone: "2132034150",
     lat: 37.989,
     lng: 23.778,
+    city: "Αθήνα",
   },
   {
     id: 4,
@@ -39,6 +45,7 @@ export const hospitals: Hospital[] = [
     phone: "2107763620",
     lat: 37.9885,
     lng: 23.7775,
+    city: "Αθήνα",
   },
   {
     id: 5,
@@ -47,6 +54,7 @@ export const hospitals: Hospital[] = [
     phone: "2105832030",
     lat: 38.015,
     lng: 23.633,
+    city: "Αθήνα",
   },
   {
     id: 6,
@@ -55,6 +63,7 @@ export const hospitals: Hospital[] = [
     phone: "14970",
     lat: 40.63,
     lng: 22.956,
+    city: "Θεσσαλονίκη",
   },
   {
     id: 7,
@@ -63,6 +72,7 @@ export const hospitals: Hospital[] = [
     phone: "2310892500",
     lat: 40.613,
     lng: 22.96,
+    city: "Θεσσαλονίκη",
   },
   {
     id: 8,
@@ -71,6 +81,7 @@ export const hospitals: Hospital[] = [
     phone: "14970",
     lat: 40.672,
     lng: 23.013,
+    city: "Θεσσαλονίκη",
   },
   {
     id: 9,
@@ -79,6 +90,7 @@ export const hospitals: Hospital[] = [
     phone: "2551352465",
     lat: 40.844,
     lng: 25.836,
+    city: "Αλεξανδρούπολη",
   },
   {
     id: 10,
@@ -87,6 +99,7 @@ export const hospitals: Hospital[] = [
     phone: "2413502436",
     lat: 39.619,
     lng: 22.396,
+    city: "Λάρισα",
   },
   {
     id: 11,
@@ -95,6 +108,7 @@ export const hospitals: Hospital[] = [
     phone: "2611-100281",
     lat: 38.293,
     lng: 21.796,
+    city: "Πάτρα",
   },
   {
     id: 12,
@@ -103,6 +117,7 @@ export const hospitals: Hospital[] = [
     phone: "26510-99500",
     lat: 39.616,
     lng: 20.835,
+    city: "Ιωάννινα",
   },
   {
     id: 13,
@@ -111,6 +126,7 @@ export const hospitals: Hospital[] = [
     phone: "2810542107",
     lat: 35.305,
     lng: 25.101,
+    city: "Ηράκλειο",
   },
   {
     id: 14,
@@ -119,5 +135,60 @@ export const hospitals: Hospital[] = [
     phone: "2241360000",
     lat: 36.417,
     lng: 28.196,
+    city: "Ρόδος",
+  },
+  // Pediatric centers
+  {
+    id: 15,
+    name: "Γ.Ν. ΠΑΙΔΩΝ «Η ΑΓΙΑ ΣΟΦΙΑ»",
+    address: "Θηβών & Παπαδιαμαντοπούλου, Τ.Κ.: 11527, Αθήνα",
+    phone: "2132013000",
+    lat: 37.9798,
+    lng: 23.7665,
+    city: "Αθήνα",
+    isPediatric: true,
+  },
+  {
+    id: 16,
+    name: "Γ.Ν. ΠΑΙΔΩΝ «Π.& Α. ΚΥΡΙΑΚΟΥ»",
+    address: "Λεωφόρος Μεσογείων 24, Τ.Κ.: 11527, Αθήνα",
+    phone: "2132009000",
+    lat: 37.9862,
+    lng: 23.7615,
+    city: "Αθήνα",
+    isPediatric: true,
+  },
+  {
+    id: 17,
+    name: "Παιδιατρική Κλινική - Π.Γ.Ν. «ΑΤΤΙΚΟΝ»",
+    address: "Ρίμινι 1, Τ.Κ.: 124 62, Χαϊδάρι",
+    phone: "2105832030",
+    lat: 38.015,
+    lng: 23.633,
+    city: "Αθήνα",
+    isPediatric: true,
+  },
+  {
+    id: 18,
+    name: "Παιδιατρική Κλινική - Γ.Ν.Θ. «ΙΠΠΟΚΡΑΤΕΙΟ»",
+    address: "Κωνσταντινουπόλεως 49, Τ.Κ.: 546 42, Θεσσαλονίκη",
+    phone: "2310892500",
+    lat: 40.613,
+    lng: 22.96,
+    city: "Θεσσαλονίκη",
+    isPediatric: true,
   },
 ];
+
+export const cities = [
+  "Αθήνα",
+  "Θεσσαλονίκη",
+  "Πάτρα",
+  "Ηράκλειο",
+  "Ιωάννινα",
+  "Λάρισα",
+  "Αλεξανδρούπολη",
+  "Ρόδος",
+] as const;
+
+export type City = (typeof cities)[number];
